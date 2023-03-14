@@ -49,7 +49,7 @@ export default function HomeSearch() {
             onMouseLeave={() => setHovered(false)}
           />
           {hovered && (
-            <div className="absolute bottom-full left-2 bottom-12 transform -translate-x-1/2 -mb-2 bg-gray-800 text-white text-center py-1 px-2 rounded-md whitespace-nowrap">
+            <div className="absolute bottom-full left-2  transform -translate-x-1/2 -mb-2 bg-gray-800 text-white text-center py-1 px-2 rounded-md whitespace-nowrap">
               Search by voice
             </div>
           )}

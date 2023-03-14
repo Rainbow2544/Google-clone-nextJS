@@ -2,6 +2,7 @@ import HomeHeader from '@/components/HomeHeader';
 import React from 'react';
 import Image from "next/image";
 import HomeSearch from '@/components/HomeSearch';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/640px-Google_2015_logo.svg.png" />
         <HomeSearch />
       </div>
+      <Footer />
       </>
   )
 }
