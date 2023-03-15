@@ -1,7 +1,12 @@
+import SearchHeader from '@/components/SearchHeader'
 import React from 'react'
 
 export default function WebSearchPage() {
   return (
-    <div>WebSearchPage</div>
+    <>
+      <SearchHeader/>
+      <div>WebSearchPage</div>
+    </>
+    
   )
 }

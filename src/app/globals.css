@@ -9,5 +9,8 @@
     .link{
         @apply text-sm  hover:underline cursor-pointer
     }
+    .header-icon{
+      @apply bg-transparent text-4xl ml-3 p-2 hover:bg-gray-200 rounded-full
+    }
     
   }
