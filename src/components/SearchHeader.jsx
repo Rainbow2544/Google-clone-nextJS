@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 import SearchHeaderOptions from './SearchHeaderOptions'
 import Link from 'next/link';
@@ -9,7 +11,7 @@ import SearchBox from './SearchBox';
 export default function SearchHeader() {
   return (
     <header className="sticky top-0 bg-white">
-        <div className='flex w-full p-6  justify-between'>
+        <div className='flex w-full p-6 items-center  justify-between'>
             <Link href={"/"}>
             <Image
                 width="120"
