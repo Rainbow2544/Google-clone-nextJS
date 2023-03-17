@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSearchParams,useRouter } from "next/navigation";
+import { useSearchParams,useRouter, usePathname } from "next/navigation";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BsFillMicFill } from "react-icons/bs";
 import { RxCross2 } from "react-icons/rx";
@@ -9,6 +9,7 @@ export default function SearchBox() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const searchTerm = searchParams.get("searchTerm");
+    const pathname = usePathname();
     const [input, setInput] = useState(searchTerm);
     
     function onChangeHandle(event){
@@ -17,7 +18,8 @@ export default function SearchBox() {
     function onSubmitHandle(event){
         event.preventDefault;
         if(!input.trim()) return;
-        router.push(`/search/web?searchTerm=${input}`);
+        const name = pathname.includes("web") ? "web" :"image";
+        router.push(`/search/${name}?searchTerm=${input}`);
     }
   return (
     
@@ -31,7 +33,7 @@ export default function SearchBox() {
             value={input}
         />
         <RxCross2
-            className="text-2xl text-gray-500 cursor-pointer sm:mr-3 pr-2 text-3xl border-r-2 border-gray-300"
+            className="text-2xl text-gray-500 cursor-pointer sm:mr-3 pr-2  border-r-2 border-gray-300"
             onClick={() => setInput("")}
         />
         <BsFillMicFill className='hidden sm:inline-flex  text-blue-500 mr-4  text-2xl cursor-pointer'/>

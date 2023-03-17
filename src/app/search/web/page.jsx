@@ -10,7 +10,7 @@ export default async function WebSearchPage({searchParams}) {
   );
 
   if (!response.ok) {
-    console.log(response);
+    //console.log(response);
     throw new Error("Something went wrong");
   }
 
