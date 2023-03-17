@@ -4,7 +4,7 @@ import React from 'react'
 export default function ImageSearchPage() {
   return (
     <>
-      <SearchHeader/>
+      
       <div>ImageSearchPage</div>
     </>
   )
