@@ -47,7 +47,7 @@ export default async function WebSearchPage({searchParams}) {
         </p>
         {searchResults && 
           searchResults.map((data) => (
-            <div className=' my-6 w-[650px]' key={data.title}>
+            <div className=' my-6 w-[650px]' key={data.link}>
               
               <h1 className='text-blue-700 text-lg hover:underline truncate '
                 ><a href={data.link}>{data.title}</a></h1>

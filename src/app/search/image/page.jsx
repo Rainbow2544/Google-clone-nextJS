@@ -43,7 +43,7 @@ export default async function ImageSearchPage({searchParams}) {
       <div className='gap-x-20 gap-y-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 my-6'>
         {searchResults && 
           searchResults.map((data) => (
-            <div className='mb-8' key={data.title}>
+            <div className='mb-8' key={data.link}>
               <Link href={data.link}>
                 <img src={data.link} alt={data.title} 
                   className="h-60 rounded-lg hover:shadow-2xl hover:border-2 hover:border-gray-200"
