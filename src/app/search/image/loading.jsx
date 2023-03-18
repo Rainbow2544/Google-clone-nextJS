@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function loading() {
+export default function Loading() {
   const box = (<div className="animate-pulse">
                 <div className="h-48 w-48 mb-4 bg-gray-200 rounded-md"></div>
                 <div className="h-2 w-48 mb-2.5 bg-gray-200 rounded-md"></div>
