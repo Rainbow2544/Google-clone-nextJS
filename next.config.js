@@ -5,7 +5,7 @@ const nextConfig = {
   },
   images:{
     domains: ["www.google.com","upload.wikimedia.org","https://freesvg.org/",
-  "upload.wikimedia.org"],
+  "upload.wikimedia.org","timgm.eprice.com.tw"],
   }
 }
 

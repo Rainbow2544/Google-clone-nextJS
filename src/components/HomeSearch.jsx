@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { AiOutlineSearch } from "react-icons/ai";
 import { BsFillMicFill } from "react-icons/bs";
 import { useRouter } from "next/navigation";
+import Image from 'next/image';
 
 export default function HomeSearch() {
     const [input, setInput] = useState("");
@@ -68,7 +69,7 @@ export default function HomeSearch() {
             className="btn"
             >
             {randomSearchLoading ?
-                <img
+                <Image
                 src="https://freesvg.org/img/1544764567.png"
                 alt="loading"
                 className="h-6 ml-14 text-center"

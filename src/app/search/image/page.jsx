@@ -1,4 +1,5 @@
 import PaginationButtons from '@/components/PaginationButtons';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 
@@ -30,7 +31,8 @@ export default async function ImageSearchPage({searchParams}) {
           </Link>
           {" "} page.
         </p>
-        <img src='https://timgm.eprice.com.tw/tw/nb/img/2021-11/12/5678235/eprice_1_cc8e198aa31956a3e7254f9962d06bfc.jpg'/>
+        <Image  alt="image"
+          src='https://timgm.eprice.com.tw/tw/nb/img/2021-11/12/5678235/eprice_1_cc8e198aa31956a3e7254f9962d06bfc.jpg'/>
       </div>
     );
   }
@@ -41,7 +43,7 @@ export default async function ImageSearchPage({searchParams}) {
           searchResults.map((data) => (
             <div className='mb-8'>
               <Link href={data.link}>
-                <img src={data.link} alt={data.title}
+                <Image src={data.link} alt={data.title} key={data.title}
                   className="h-60 rounded-lg hover:shadow-2xl hover:border-2 hover:border-gray-200"
                 />
               </Link>
