@@ -1,9 +1,12 @@
+import PaginationButtons from '@/components/PaginationButtons';
 import Link from 'next/link';
 import React from 'react'
 
 export default async function ImageSearchPage({searchParams}) {
+  const index = searchParams.start ? parseInt(searchParams.start): 1;
+  
   const response = await fetch(
-    `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}&searchType=image`
+    `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}&searchType=image&start=${index}`
   );
 
   if (!response.ok) {
@@ -13,7 +16,7 @@ export default async function ImageSearchPage({searchParams}) {
 
   const data = await response.json();
   const searchResults = data.items;
-  console.log(data);
+  
 
   //when there is no results
   if(!searchResults){
@@ -32,26 +35,28 @@ export default async function ImageSearchPage({searchParams}) {
     );
   }
   return (
-    <div className='sm:pb-24 pb-40 mx-5 mt-4 '>
+    <div className='sm:pb-24 pb-40 mx-10 mt-4 '>
       <div className='space-x-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 my-6'>
         {searchResults && 
           searchResults.map((data) => (
             <div className='mb-8'>
-              <a href={data.link}>
+              <Link href={data.link}>
                 <img src={data.link} alt={data.title}
                   className="h-60 rounded-lg hover:shadow-2xl hover:border-2 hover:border-gray-200"
                 />
-              </a>
-              <a href={data.image.contextLink}>
+              </Link>
+              <Link href={data.image.contextLink}>
                 <p className='text-xs hover:underline'>{data.displayLink}</p>
-              </a>
-              <a href={data.image.contextLink}>
+              </Link>
+              <Link href={data.image.contextLink}>
                 <p className=' truncate hover:underline'>{data.title}</p>
-              </a>
+              </Link>
             </div>
           ))}
       </div>
-      
+      <div>
+        <PaginationButtons />
+      </div>
     </div>
   )
 }
