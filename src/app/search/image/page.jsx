@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import PaginationButtons from '@/components/PaginationButtons';
 import Image from 'next/image';
 import Link from 'next/link';

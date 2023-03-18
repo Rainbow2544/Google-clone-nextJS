@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 
 import PaginationButtons from '@/components/PaginationButtons';
 import Image from 'next/image';
@@ -32,7 +33,7 @@ export default async function WebSearchPage({searchParams}) {
           </Link>
           {" "} page.
         </p>
-        <Image alt="image" key="image"
+        <Image alt="image" 
           src='https://timgm.eprice.com.tw/tw/nb/img/2021-11/12/5678235/eprice_1_cc8e198aa31956a3e7254f9962d06bfc.jpg'/>
       </div>
     );
