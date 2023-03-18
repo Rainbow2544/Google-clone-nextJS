@@ -16,7 +16,7 @@ export default function SearchBox() {
         setInput(event.target.value);
     }
     function onSubmitHandle(event){
-        event.preventDefault;
+        event.preventDefault();
         if(!input.trim()) return;
         const name = pathname.includes("web") ? "web" :"image";
         router.push(`/search/${name}?searchTerm=${input}`);

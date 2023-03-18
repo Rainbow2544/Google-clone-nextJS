@@ -16,7 +16,7 @@ export default function HomeSearch() {
     }
 
     function onSubmitHandle(event){
-        event.preventDefault;
+        event.preventDefault();
         if(!input.trim()) return;
         router.push(`/search/web?searchTerm=${input}`);
     }
