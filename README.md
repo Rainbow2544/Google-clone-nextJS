@@ -59,4 +59,4 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
  4. Open http://localhost:3000 with your browser to see the result.
  
 ## Contributing
-Contributions are always welcome! Please read the contribution guidelines first.
+Contributions are always welcome! .
