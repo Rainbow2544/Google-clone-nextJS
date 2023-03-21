@@ -18,7 +18,7 @@
 ## About
 
 This is a Google Search clone built with NextJS13 and Tailwind CSS. It allows users to search for both text and images.
-
+Here is the <a href="https://google-clone-next-js-theta.vercel.app/">Google Search clone live demo.</a>
 ## Features
 
 - Text search
